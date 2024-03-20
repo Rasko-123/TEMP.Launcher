@@ -84,10 +84,13 @@ func main() {
 
 	localappdata := fmt.Sprintf("%s/AppData/Local/Lightyear", os.Getenv("USERPROFILE"))
 
-	color.Magenta(`
-	╦  ┬┌─┐┬ ┬┌┬┐┬ ┬┌─┐┌─┐┬─┐
-	║  ││ ┬├─┤ │ └┬┘├┤ ├─┤├┬┘
-	╩═╝┴└─┘┴ ┴ ┴  ┴ └─┘┴ ┴┴└─
+	color.blue(`
+//////////////////////////////////////
+Zena Beta Active FN Build is 1.7.2
+/////////////////////////////////////
+Full-Locker= Yes
+Gamemodes= Atm only Solo
+more Soon 
 	`)
 
 	if !folderExists(localappdata) {
@@ -110,9 +113,9 @@ func main() {
 	//Ask for input
 	var input string
 	color.White(`Select your option:
-	1. Start Fortnite
+	1. Start Zena
 	2. Change Fortnite path
-	3. Change email and password
+	3. Change email and password /everything in the E-Mail before @ is your ingame name/
 	`)
 
 	fmt.Scanln(&input)
@@ -212,7 +215,7 @@ func runFortnite(localappdata string, dllName string) {
 			if err != nil {
 				panic(err)
 			}
-			println("Injected")
+			println("Loaded")
 		}
 
 	}
